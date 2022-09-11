@@ -19,9 +19,10 @@ jobs:
         run: npm run eslint 
       - name: test
         run: npm test       
+
       - name: pushing code to heroku
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      - uses: akhileshns/heroku-deploy@v3.8.8
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "full-stack-open-pokedex-cicd" #Must be unique in Heroku
+          heroku_app_name: "full-stack-open-pokedex-cicd"
           heroku_email: "dato.ardzenadze.2000@gmail.com"
