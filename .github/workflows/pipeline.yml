@@ -24,10 +24,7 @@ jobs:
         run: npm test
 
       - name: build
-        run: npm run build
-
-      - name: strat production
-        run: npm run start-prod     
+        run: npm run build   
 
       - name: pushing code to heroku
         uses: akhileshns/heroku-deploy@v3.8.8
