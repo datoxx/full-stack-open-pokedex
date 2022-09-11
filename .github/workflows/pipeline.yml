@@ -27,7 +27,7 @@ jobs:
         run: npm run build 
 
       - name: pushing code to heroku
-      - uses: akhileshns/heroku-deployv3.12.12
+        uses: akhileshns/heroku-deployv3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "full-stack-open-pokedex-cicd"
