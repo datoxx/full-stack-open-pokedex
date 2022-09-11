@@ -34,4 +34,4 @@ jobs:
           heroku_email: "dato.ardzenadze.2000@gmail.com"
           healthcheck: "https://full-stack-open-pokedex-cicd.herokuapp.com/health"
           checkstring: "ok"
-          # rollbackonhealthcheckfailed: true
+          rollbackonhealthcheckfailed: true
