@@ -33,3 +33,4 @@ jobs:
           heroku_app_name: "full-stack-open-pokedex-cicd"
           heroku_email: "dato.ardzenadze.2000@gmail.com"
           healthcheck: "https://dashboard.heroku.com/apps/full-stack-open-pokedex-cicd"
+          checkstring: "ok"
