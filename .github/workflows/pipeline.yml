@@ -29,13 +29,13 @@ jobs:
       - name: build
         run: npm run build   
 
-      - name: pushing code to heroku
+      - name: pushing code to heroku #push code to heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         if: ${{ github.event_name == 'push' }}
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "full-stack-open-pokedex-cicd"
           heroku_email: "dato.ardzenadze.2000@gmail.com"
-          healthcheck: "https://full-stack-open-pokedex-cicd.herokuapp.com/health"
+          healthcheck: "https://full-stack-open-pokedex-cicd.herokuapp.com/health" #healthchek
           checkstring: "ok"
           rollbackonhealthcheckfailed: true
