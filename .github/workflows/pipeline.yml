@@ -31,7 +31,7 @@ jobs:
 
       - name: pushing code to heroku #push code to heroku
         uses: akhileshns/heroku-deploy@v3.12.12
-        if: ${{ github.event_name == 'push' }}
+        if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message, ' '), '#skip') }}
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "full-stack-open-pokedex-cicd"
@@ -48,7 +48,7 @@ jobs:
 
       - name: Bump version and push tag
         uses: anothrNick/github-tag-action@1.36.0
-        if: ${{ github.event_name == 'push' }}
+        if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message, ' '), '#skip') }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BUMP: patch
