@@ -20,10 +20,10 @@ jobs:
       - name: npm install 
         run: npm install  
 
-      - name: lint
+      - name: lint #test lint
         run: npm run eslint 
 
-      - name: test
+      - name: test #test code
         run: npm test
 
       - name: build
